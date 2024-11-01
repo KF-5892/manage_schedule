@@ -3,6 +3,7 @@ import pandas as pd
 from gspread_pandas import Spread, Client
 import gspread
 from google.oauth2.service_account import Credentials
+from google.oauth2 import service_account
 from datetime import datetime, time
 
 # Googleスプレッドシートの設定
@@ -16,10 +17,11 @@ scopes = [
     'https://www.googleapis.com/auth/drive'
 ]
 
-credentials = Credentials.from_service_account_file(
-    YOUR_CREDENTIAL_FILEPATH,
-    scopes=scopes
-)
+# credentials = Credentials.from_service_account_file(
+#     YOUR_CREDENTIAL_FILEPATH,
+#     scopes=scopes
+# )
+credentials = service_account.Credentials.from_service_account_info( st.secrets["gcp_service_account"], scopes=scopes)
 
 gc = gspread.authorize(credentials)
 
