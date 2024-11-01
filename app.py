@@ -30,7 +30,7 @@ def load_data():
     spread = Spread(SPREADSHEET_ID, sheet=SHEET_NAME, creds=credentials)
     df = spread.sheet_to_df()
     df['時間'] = pd.to_datetime(df['時間'], format='%H:%M').dt.time  # 
-    st.dataframe(df)
+    # st.dataframe(df)
     return df
 
 # データをスプレッドシートに保存する関数
