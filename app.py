@@ -51,7 +51,7 @@ def main():
         edited_df = st.data_editor(
             st.session_state.data,
             column_config={
-                "日付": st.column_config.DateColumn("日付", format="YYYY/MM/DD"),
+                # "日付": st.column_config.DateColumn("日付", format="YYYY/MM/DD"),
                 "時間": st.column_config.TimeColumn("時間", format="HH:mm",default=time(21, 00)),
                 "タイトル": st.column_config.TextColumn("タイトル"),
                 "種類": st.column_config.SelectboxColumn("種類", options=["レッスン", "本番", "リハーサル"]),
