@@ -11,7 +11,7 @@ SPREADSHEET_ID = "https://docs.google.com/spreadsheets/d/1dgWwUnTNclHZBNyb6VEp97
 SHEET_NAME = "11月"
 
 # 認証設定
-YOUR_CREDENTIAL_FILEPATH = 'streamlitkey.json'
+# YOUR_CREDENTIAL_FILEPATH = 'streamlitkey.json'
 scopes = [
     'https://www.googleapis.com/auth/spreadsheets',
     'https://www.googleapis.com/auth/drive'
